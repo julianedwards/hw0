@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-""" This program reads the database file and computes the number of records that contain 
-    the exact case insenstive string strPattern. 
+""" This program reads the database file and computes the number of records 
+    that contain the exact case insenstive string strPattern. 
 """
 
 def findDuplicate(db, strPattern):
