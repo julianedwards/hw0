@@ -1,21 +1,21 @@
 #!/usr/bin/env python
-""" this program reads the database file and computes the number of records that contain 
-    the exact case insenstive phrase "single malt scotch"
+""" This program reads the database file and computes the number of records that contain 
+    the exact case insenstive string strPattern. 
 """
 
-def findDuplicate(dbsales, strPattern):
+def findDuplicate(db, strPattern):
       
-    with open(dbsales, 'r') as f:
-        sales = f.readlines()
+    with open(db, 'r') as f:
+        allLines = f.readlines()
 
     strPattern = strPattern.lower()
 
     count = 0 
     # search each line for strPattern
-    for line in sales:
-        singleSale = ' '.join(line.split())
-        singleSale = singleSale.lower()
-        if singleSale.find(strPattern) > -1:
+    for line in allLines:
+        singleLine = ' '.join(line.split())
+        singleLine= singleLine.lower()
+        if singleLine.find(strPattern) > -1:
             count += 1
 
     # return the number of occurances of strPattern in dbsales
